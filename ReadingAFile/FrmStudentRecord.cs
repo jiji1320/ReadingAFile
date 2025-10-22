@@ -63,5 +63,10 @@ namespace ReadingAFile
             frm.Show();
 
         }
+
+        private void FrmStudentRecord_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

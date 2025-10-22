@@ -49,5 +49,16 @@ namespace ReadingAFile
                 }
             }
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmStudentRecord studentRecord = new FrmStudentRecord();
+            studentRecord.Show();
+        }
     }
 }

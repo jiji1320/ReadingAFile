@@ -39,14 +39,16 @@
             this.label9 = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnStudentRecord = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtStudentNo = new System.Windows.Forms.TextBox();
+            this.txtLastName = new System.Windows.Forms.TextBox();
+            this.txtAge = new System.Windows.Forms.TextBox();
+            this.txtContactNo = new System.Windows.Forms.TextBox();
+            this.txtMiddleInitial = new System.Windows.Forms.TextBox();
+            this.dtpBirthday = new System.Windows.Forms.DateTimePicker();
+            this.txtFirstName = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.cmbProgram = new System.Windows.Forms.ComboBox();
+            this.cmbGender = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -138,6 +140,7 @@
             this.btnRegister.TabIndex = 9;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // btnStudentRecord
             // 
@@ -149,54 +152,54 @@
             this.btnStudentRecord.UseVisualStyleBackColor = true;
             this.btnStudentRecord.Click += new System.EventHandler(this.btnStudentRecord_Click);
             // 
-            // textBox1
+            // txtStudentNo
             // 
-            this.textBox1.Location = new System.Drawing.Point(122, 131);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 20);
-            this.textBox1.TabIndex = 11;
+            this.txtStudentNo.Location = new System.Drawing.Point(122, 131);
+            this.txtStudentNo.Name = "txtStudentNo";
+            this.txtStudentNo.Size = new System.Drawing.Size(182, 20);
+            this.txtStudentNo.TabIndex = 11;
             // 
-            // textBox2
+            // txtLastName
             // 
-            this.textBox2.Location = new System.Drawing.Point(122, 176);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(182, 20);
-            this.textBox2.TabIndex = 12;
+            this.txtLastName.Location = new System.Drawing.Point(122, 176);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.Size = new System.Drawing.Size(182, 20);
+            this.txtLastName.TabIndex = 12;
             // 
-            // textBox3
+            // txtAge
             // 
-            this.textBox3.Location = new System.Drawing.Point(104, 226);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(91, 20);
-            this.textBox3.TabIndex = 13;
+            this.txtAge.Location = new System.Drawing.Point(104, 226);
+            this.txtAge.Name = "txtAge";
+            this.txtAge.Size = new System.Drawing.Size(91, 20);
+            this.txtAge.TabIndex = 13;
             // 
-            // textBox4
+            // txtContactNo
             // 
-            this.textBox4.Location = new System.Drawing.Point(393, 277);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(164, 20);
-            this.textBox4.TabIndex = 14;
+            this.txtContactNo.Location = new System.Drawing.Point(393, 277);
+            this.txtContactNo.Name = "txtContactNo";
+            this.txtContactNo.Size = new System.Drawing.Size(164, 20);
+            this.txtContactNo.TabIndex = 14;
             // 
-            // textBox5
+            // txtMiddleInitial
             // 
-            this.textBox5.Location = new System.Drawing.Point(603, 176);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(65, 20);
-            this.textBox5.TabIndex = 15;
+            this.txtMiddleInitial.Location = new System.Drawing.Point(603, 176);
+            this.txtMiddleInitial.Name = "txtMiddleInitial";
+            this.txtMiddleInitial.Size = new System.Drawing.Size(65, 20);
+            this.txtMiddleInitial.TabIndex = 15;
             // 
-            // dateTimePicker1
+            // dtpBirthday
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(102, 274);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(202, 20);
-            this.dateTimePicker1.TabIndex = 16;
+            this.dtpBirthday.Location = new System.Drawing.Point(102, 274);
+            this.dtpBirthday.Name = "dtpBirthday";
+            this.dtpBirthday.Size = new System.Drawing.Size(202, 20);
+            this.dtpBirthday.TabIndex = 16;
             // 
-            // textBox6
+            // txtFirstName
             // 
-            this.textBox6.Location = new System.Drawing.Point(384, 176);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(173, 20);
-            this.textBox6.TabIndex = 17;
+            this.txtFirstName.Location = new System.Drawing.Point(384, 176);
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.Size = new System.Drawing.Size(173, 20);
+            this.txtFirstName.TabIndex = 17;
             // 
             // label10
             // 
@@ -208,20 +211,38 @@
             this.label10.TabIndex = 18;
             this.label10.Text = "Registration";
             // 
+            // cmbProgram
+            // 
+            this.cmbProgram.FormattingEnabled = true;
+            this.cmbProgram.Location = new System.Drawing.Point(384, 130);
+            this.cmbProgram.Name = "cmbProgram";
+            this.cmbProgram.Size = new System.Drawing.Size(176, 21);
+            this.cmbProgram.TabIndex = 19;
+            // 
+            // cmbGender
+            // 
+            this.cmbGender.FormattingEnabled = true;
+            this.cmbGender.Location = new System.Drawing.Point(374, 226);
+            this.cmbGender.Name = "cmbGender";
+            this.cmbGender.Size = new System.Drawing.Size(66, 21);
+            this.cmbGender.TabIndex = 20;
+            // 
             // FrmRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(725, 420);
+            this.Controls.Add(this.cmbGender);
+            this.Controls.Add(this.cmbProgram);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtFirstName);
+            this.Controls.Add(this.dtpBirthday);
+            this.Controls.Add(this.txtMiddleInitial);
+            this.Controls.Add(this.txtContactNo);
+            this.Controls.Add(this.txtAge);
+            this.Controls.Add(this.txtLastName);
+            this.Controls.Add(this.txtStudentNo);
             this.Controls.Add(this.btnStudentRecord);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.label9);
@@ -235,6 +256,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmRegistration";
             this.Text = "FrmRegistration";
+            this.Load += new System.EventHandler(this.FrmRegistration_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,13 +275,15 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnStudentRecord;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtStudentNo;
+        private System.Windows.Forms.TextBox txtLastName;
+        private System.Windows.Forms.TextBox txtAge;
+        private System.Windows.Forms.TextBox txtContactNo;
+        private System.Windows.Forms.TextBox txtMiddleInitial;
+        private System.Windows.Forms.DateTimePicker dtpBirthday;
+        private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox cmbProgram;
+        private System.Windows.Forms.ComboBox cmbGender;
     }
 }

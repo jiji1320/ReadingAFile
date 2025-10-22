@@ -97,6 +97,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmStudentRecord";
             this.Text = "FrmStudentRecord";
+            this.Load += new System.EventHandler(this.FrmStudentRecord_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
